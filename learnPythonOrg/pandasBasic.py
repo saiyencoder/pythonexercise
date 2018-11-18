@@ -46,7 +46,7 @@ brics.index = ["BR", "RU", "IN", "CH", "SA"]
 print(brics)
 
 # Another way to create a DataFrame is by importing a csv file using Pandas.
-# Import game_high_points.csv *Worked but took out path*
+# Import game_high_points.csv
 points = pd.read_csv('/game_high_points.csv')
 
 # Print out points
