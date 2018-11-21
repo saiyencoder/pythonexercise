@@ -54,6 +54,23 @@ def calculator(choice):
   elif choice == 4:
     div()
 
+def stay_on():
+  keep_going = True
+  user_input = ""
+  while keep_going:
+    calculator(valid_operation_input())
+    while user_input.lower() != "n" or user_input.lower() != "y":
+      user_input = input("Continue? (Y/N) ")
+      if user_input.lower() == "y":
+        break
+      elif user_input.lower() == "n":
+        print("Calculator shutting off...Good Bye....")
+        keep_going = False
+        break
+      else:
+        print("Invalid entry. Please try again.\n")
+        continue
+
 print("Welcome to the Python Calculator!")
 print()
 print("What operation would you like to do:")
@@ -61,4 +78,4 @@ print("1. Addition")
 print("2. Subtraction")
 print("3. Multiplication")
 print("4. Division")
-calculator(valid_operation_input())
+stay_on()
