@@ -29,7 +29,7 @@ def mul():
 def div():
   num_1,num_2 = valid_float_input() 
   quotient = num_1 / num_2
-  print("%d / %d = %d" % (num_1, num_2, quotient))
+  print("%d / %d = %.2f" % (num_1, num_2, quotient))
 
 def valid_operation_input():
   while True:
